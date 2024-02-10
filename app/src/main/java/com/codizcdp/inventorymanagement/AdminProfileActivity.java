@@ -8,10 +8,12 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.codizcdp.inventorymanagement.databinding.ActivityAdminProfileBinding;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class AdminProfileActivity extends AppCompatActivity {
 
     private ActivityAdminProfileBinding binding;
+    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,8 @@ public class AdminProfileActivity extends AppCompatActivity {
         binding= ActivityAdminProfileBinding.inflate(getLayoutInflater());
 
         setContentView(binding.getRoot());
+
+        firebaseAuth = FirebaseAuth.getInstance();
 
         setEventLis();
     }
@@ -35,7 +39,9 @@ public class AdminProfileActivity extends AppCompatActivity {
         binding.btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                firebaseAuth.signOut();
                 Toast.makeText(AdminProfileActivity.this, "Logout", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(AdminProfileActivity.this, LoginActivity.class));
             }
         });
 
