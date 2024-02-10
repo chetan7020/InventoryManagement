@@ -29,8 +29,8 @@ public class AdminMainActivity extends AppCompatActivity {
         binding.adminCardItems.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                startActivity(new Intent(AdminMainActivity.this, AdminItemsActivity.class));
-                startActivity(new Intent(AdminMainActivity.this, AdminItemInfoActivity.class));
+                startActivity(new Intent(AdminMainActivity.this, AdminItemsActivity.class));
+//                startActivity(new Intent(AdminMainActivity.this, AdminItemInfoActivity.class));
             }
         });
 

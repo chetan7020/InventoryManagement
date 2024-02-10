@@ -46,7 +46,7 @@
             android:text="Quantity" />
 
         <EditText
-            android:id="@+id/et_class"
+            android:id="@+id/et_quantity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -64,14 +64,14 @@
             android:text="Description" />
 
         <EditText
-            android:id="@+id/et_collage_code"
+            android:id="@+id/et_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_update"
+        android:id="@+id/btn_add"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
