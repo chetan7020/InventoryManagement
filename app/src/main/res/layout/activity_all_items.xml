@@ -11,23 +11,10 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:id="@+id/ll_data"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <include layout="@layout/item_card_layout" />
-
-            <include layout="@layout/item_card_layout" />
-
-            <include layout="@layout/item_card_layout" />
-
-            <include layout="@layout/item_card_layout" />
-
-            <include layout="@layout/item_card_layout" />
-
-            <include layout="@layout/item_card_layout" />
-
-        </LinearLayout>
+            android:orientation="vertical" />
 
     </androidx.core.widget.NestedScrollView>
 

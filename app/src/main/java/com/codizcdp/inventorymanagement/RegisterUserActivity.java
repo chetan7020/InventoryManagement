@@ -75,7 +75,7 @@ public class RegisterUserActivity extends AppCompatActivity {
                         firebaseFirestore
                                 .collection("User")
                                 .document(email)
-                                .set(new User(email, "2"))
+                                .set(new User(email, "2", collage_code))
                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void unused) {

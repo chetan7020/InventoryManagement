@@ -72,7 +72,7 @@ public class RegisterAdminActivity extends AppCompatActivity {
                         firebaseFirestore
                                 .collection("User")
                                 .document(email)
-                                .set(new User(email, "1"))
+                                .set(new User(email, "1", collage_code))
                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void unused) {
@@ -99,7 +99,7 @@ public class RegisterAdminActivity extends AppCompatActivity {
                                 }).addOnFailureListener(new OnFailureListener() {
                                     @Override
                                     public void onFailure(@NonNull Exception e) {
-                                        Log.d("TAG", "User Type : Admin (Failed)");
+                                        Log.d("TAG", "User Type : Admin (Failed) " + e.getMessage());
                                     }
                                 });
                     }
