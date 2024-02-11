@@ -1,10 +1,10 @@
 package com.codizcdp.inventorymanagement.model;
 
+import java.io.Serializable;
 import java.util.UUID;
 
-public class Item {
+public class Item implements Serializable {
     String ID, name, total_quantity, available_quantity, desc;
-
     public Item() {
     }
 

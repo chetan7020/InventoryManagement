@@ -15,9 +15,9 @@
             android:id="@+id/btn_add_new_item"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="40dp"
-            android:layout_marginTop="20dp"
             android:layout_gravity="end"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
             android:text="Add New"
             android:textAllCaps="false" />
 
@@ -26,25 +26,10 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
+                android:id="@+id/ll_data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <include layout="@layout/item_plain_layout" />
-
-                <include layout="@layout/item_plain_layout" />
-
-                <include layout="@layout/item_plain_layout" />
-
-                <include layout="@layout/item_plain_layout" />
-
-                <include layout="@layout/item_plain_layout" />
-
-                <include layout="@layout/item_plain_layout" />
-
-                <include layout="@layout/item_plain_layout" />
-
-            </LinearLayout>
+                android:orientation="vertical" />
 
         </androidx.core.widget.NestedScrollView>
 

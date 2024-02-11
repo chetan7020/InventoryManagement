@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "849191381827",
+    "project_id": "sports-inventory-management",
+    "storage_bucket": "sports-inventory-management.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:849191381827:android:885ac80dd20d97e8b49df6",
+        "android_client_info": {
+          "package_name": "com.codizcdp.inventorymanagement"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsdlE88R9N5f4HqfxfRhSyyMPapVwrz6Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

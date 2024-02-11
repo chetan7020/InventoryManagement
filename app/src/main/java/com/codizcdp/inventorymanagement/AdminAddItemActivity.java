@@ -73,10 +73,11 @@ public class AdminAddItemActivity extends AppCompatActivity {
                 .collection("Admin")
                 .document(firebaseAuth.getCurrentUser().getEmail())
                 .collection("Items")
-                .add(new Item(id, name, total_quantity, available_quantity, description))
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                .document(id)
+                .set(new Item(id, name, total_quantity, available_quantity, description))
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
-                    public void onSuccess(DocumentReference documentReference) {
+                    public void onSuccess(Void unused) {
                         Log.d("TAG", "Admin : Item Add (Success)");
                         Toast.makeText(AdminAddItemActivity.this, "Item Added", Toast.LENGTH_SHORT).show();
                         setText();
@@ -88,6 +89,20 @@ public class AdminAddItemActivity extends AppCompatActivity {
                         Toast.makeText(AdminAddItemActivity.this, "Failed to Add Item", Toast.LENGTH_SHORT).show();
                     }
                 });
+//                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+//                    @Override
+//                    public void onSuccess(DocumentReference documentReference) {
+//                        Log.d("TAG", "Admin : Item Add (Success)");
+//                        Toast.makeText(AdminAddItemActivity.this, "Item Added", Toast.LENGTH_SHORT).show();
+//                        setText();
+//                    }
+//                }).addOnFailureListener(new OnFailureListener() {
+//                    @Override
+//                    public void onFailure(@NonNull Exception e) {
+//                        Log.d("TAG", "Admin : Item Add (Failed)");
+//                        Toast.makeText(AdminAddItemActivity.this, "Failed to Add Item", Toast.LENGTH_SHORT).show();
+//                    }
+//                });
     }
 
     private void setEventLis() {
